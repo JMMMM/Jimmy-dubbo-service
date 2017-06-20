@@ -39,7 +39,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.hibernate:hibernate-validator")
-    compile("com.google.guava:guava")
+    compile("com.google.guava:guava:22.0")
 //    testCompile("org.springframework.boot:spring-boot-starter-test")
     compile('com.alibaba:dubbo:2.5.3') {
         exclude group: 'org.springframework'
