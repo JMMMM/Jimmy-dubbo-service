@@ -2,6 +2,7 @@ buildscript {
     ext {
         springBootVersion = '2.0.0.BUILD-SNAPSHOT'
         dubboVersion = '2.5.3'
+        soaApiVersion="1.0"
     }
     repositories {
         // NOTE: You should declare only repositories that you need here
@@ -40,6 +41,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.hibernate:hibernate-validator")
     compile("com.google.guava:guava:22.0")
+    compile("com.jimmy.soa:soa-api:${soaApiVersion}")
 //    testCompile("org.springframework.boot:spring-boot-starter-test")
     compile('com.alibaba:dubbo:2.5.3') {
         exclude group: 'org.springframework'
