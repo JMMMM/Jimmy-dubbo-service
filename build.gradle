@@ -36,10 +36,11 @@ repositories {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter")
-//    compile("org.hibernate:hibernate-validator")
-    compile ('com.alibaba:dubbo:2.5.3'){
-        exclude group: 'org.springframework'
-    }
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile('org.springframework.boot:spring-boot-starter')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.hibernate:hibernate-validator")
+//    testCompile("org.springframework.boot:spring-boot-starter-test")
+//    compile ('com.alibaba:dubbo:2.5.3'){
+//        exclude group: 'org.springframework'
+//    }
 }
