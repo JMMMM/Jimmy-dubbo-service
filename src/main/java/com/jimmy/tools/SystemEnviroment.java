@@ -11,7 +11,7 @@ import java.util.Properties;
  */
 public class SystemEnviroment {
     private static Logger logger = LoggerFactory.getLogger(SystemEnviroment.class);
-    private static Properties properties = null;
+    private static Properties properties;
 
     private SystemEnviroment() {
 
@@ -19,6 +19,7 @@ public class SystemEnviroment {
 
     private static void init() {
         logger.info("加载配置文件:{}", "config.properties");
+        properties = new Properties();
         try {
             properties.load(SystemEnviroment.class.getClassLoader().getResourceAsStream("config.properties"));
         } catch (IOException e) {
