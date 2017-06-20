@@ -1,7 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.0.0.BUILD-SNAPSHOT'
-        dubboVersion='2.5.3'
+        dubboVersion = '2.5.3'
     }
     repositories {
         // NOTE: You should declare only repositories that you need here
@@ -21,7 +21,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-apply from :'./tasks/init.gradle'
+apply from: './tasks/init.gradle'
 
 version = springBootVersion
 group = 'org.springframework.boot'
@@ -39,8 +39,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.hibernate:hibernate-validator")
+    compile("com.google.guava:guava")
 //    testCompile("org.springframework.boot:spring-boot-starter-test")
-//    compile ('com.alibaba:dubbo:2.5.3'){
-//        exclude group: 'org.springframework'
-//    }
+    compile('com.alibaba:dubbo:2.5.3') {
+        exclude group: 'org.springframework'
+    }
 }
