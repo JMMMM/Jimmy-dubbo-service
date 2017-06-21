@@ -46,4 +46,11 @@ dependencies {
     compile('com.alibaba:dubbo:2.5.3') {
         exclude group: 'org.springframework'
     }
+    compile('org.apache.zookeeper:zookeeper:3.4.0'){
+        exclude group:'org.slf4j'
+        exclude group:'log4j'
+    }
+    compile('com.github.sgroschupf:zkclient:0.1'){
+        exclude group:'log4j'
+    }
 }

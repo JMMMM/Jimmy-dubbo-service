@@ -5,6 +5,11 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://code.alibabatech.com/schema/dubbo
     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="provider"/>
+    <!-- 注册中心暴露服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="192.168.99.100:2181" />
+    <!-- 暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20880" />
 
     <dubbo:service interface="com.jimmy.api.HelloService" ref="helloServiceImpl" retries="0" timeout="6000"/>
 </beans>
